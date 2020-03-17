@@ -1,0 +1,23 @@
+{
+  "name": "corona-places",
+  "version": "1.0.0",
+  "description": "describe the place where corona virus happens",
+  "main": "app.js",
+  "dependencies": {
+    "http-server": "^0.12.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blatoo/coronavirus_places.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blatoo/coronavirus_places/issues"
+  },
+  "homepage": "https://github.com/blatoo/coronavirus_places#readme"
+}
