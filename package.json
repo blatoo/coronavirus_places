@@ -1,8 +1,8 @@
 {
-  "name": "corona-places",
+  "name": "corona-report",
   "version": "1.0.0",
-  "description": "describe the place where corona virus happens",
-  "main": "app.js",
+  "description": "",
+  "main": "index.html",
   "dependencies": {
     "http-server": "^0.12.1"
   },
