@@ -13,10 +13,10 @@ var map = new mapboxgl.Map({
 })
 
 const getColorFromCount = count => {
-	if (count >= 100) {
+	if (count >= 1000) {
 		return 'red'
 	}
-	if (count >= 10) {
+	if (count >= 100) {
 		return 'blue'
 	}
 	return 'gray'
