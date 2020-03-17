@@ -22,6 +22,15 @@ const getColorFromCount = count => {
 	return 'gray'
 }
 
+const getPopupContent = currentPlace => {
+	return `<Strong>${currentPlace.name}</Strong><br>
+  infected: ${currentPlace.infected}<br>
+  dead: ${currentPlace.dead}<br>
+  sick: ${currentPlace.sick}<br>
+  recovered: ${currentPlace.recovered}<br>
+  updated at: ${currentPlace.lastUpdated}`
+}
+
 fetch('get-places.json')
 	.then(response => response.json())
 	.then(res => {
@@ -29,10 +38,14 @@ fetch('get-places.json')
 	})
 	.then(data => {
 		data.forEach(currentPlace => {
+			let popup = new mapboxgl.Popup({ offset: 25 }).setHTML(
+				getPopupContent(currentPlace)
+			)
 			new mapboxgl.Marker({
 				color: getColorFromCount(currentPlace.infected)
 			})
 				.setLngLat([currentPlace.longitude, currentPlace.latitude])
+				.setPopup(popup)
 				.addTo(map)
 		})
 	})
